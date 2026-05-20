@@ -65,7 +65,7 @@ body{
 /* ====================================================== */
 
 section{
-  padding:100px 5%;
+  padding:50px 5%;
   position:relative;
 }
 
@@ -300,8 +300,7 @@ section{
 
 .collection-hero-content h1{
 
-  font-size:
-    clamp(3rem,8vw,7rem);
+  font-size:5.0rem;
 
   font-weight:900;
 
@@ -1364,7 +1363,7 @@ section{
   position: relative;
 
   padding:
-    120px 5% 40px;
+    90px 5% 30px;
 
   overflow: hidden;
 
@@ -1652,10 +1651,14 @@ section{
 
 .footer-social{
 
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items:center;
 
-  gap: 16px;
+  gap:16px;
+
+  margin-top:24px;
+
+  flex-wrap:wrap;
 
 }
 
@@ -1670,7 +1673,7 @@ section{
   justify-content: center;
   align-items: center;
 
-  border-radius: 50%;
+  border-radius: 16px;
 
   background:
     rgba(255,255,255,0.05);
@@ -1974,6 +1977,7 @@ section{
   .footer-social{
 
     flex-wrap: wrap;
+    justify-content: center;
 
   }
 

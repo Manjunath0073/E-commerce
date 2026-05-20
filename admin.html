@@ -90,59 +90,19 @@
 
       </a>
 
-      <a href="#">
-
-        <i class="fa-solid fa-users"></i>
-
-        <span>Customers</span>
-
-      </a>
-
-      <a href="#">
-
-        <i class="fa-solid fa-ticket"></i>
-
-        <span>Coupons</span>
-
-      </a>
-
-      <a href="#">
-
-        <i class="fa-solid fa-wallet"></i>
-
-        <span>Transactions</span>
-
-      </a>
-
-      <a href="#">
-
-        <i class="fa-solid fa-chart-pie"></i>
-
-        <span>Analytics</span>
-
-      </a>
-
-      <a href="#">
-
-        <i class="fa-solid fa-gear"></i>
-
-        <span>Settings</span>
-
-      </a>
-
     </nav>
 
     <!-- Bottom -->
 
     <div class="sidebar-bottom">
 
-      <button>
+      <a href="index.html" class="logout-btn">
 
         <i class="fa-solid fa-right-from-bracket"></i>
 
         Logout
 
-      </button>
+      </a>
 
     </div>
 
@@ -208,8 +168,8 @@
         <div class="admin-profile">
 
           <img
-            src="assets/images/user1.jpg"
-            alt=""
+            src="Assets/dashboard/person1.webp"
+            alt="person"
           >
 
         </div>
@@ -262,7 +222,7 @@
       <div class="hero-image">
 
         <img
-          src="assets/images/product5.png"
+          src="Assets/dashboard/vitaly-gariev-5YHEsQmkiCM-unsplash_11zon (1).webp"
           alt=""
         >
 
@@ -487,7 +447,7 @@
         <div class="inventory-card">
 
           <img
-            src="assets/images/product1.png"
+            src="Assets/dashboard/taylor-smith-aDZ5YIuedQg-unsplash_11zon.webp"
             alt=""
           >
 
@@ -514,7 +474,7 @@
         <div class="inventory-card">
 
           <img
-            src="assets/images/product2.png"
+            src="Assets/dashboard/shutter-speed-BQ9usyzHx_w-unsplash_11zon.webp"
             alt=""
           >
 
@@ -597,7 +557,28 @@
     </section>
 
   </main>
+<script>
 
+  const navItems =
+  document.querySelectorAll(".sidebar-nav a");
+
+  navItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+      navItems.forEach(nav => {
+
+        nav.classList.remove("active");
+
+      });
+
+      item.classList.add("active");
+
+    });
+
+  });
+
+</script>
 </body>
 
 </html>

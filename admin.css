@@ -235,7 +235,7 @@ body{
 
 }
 
-.sidebar-bottom button{
+.sidebar-bottom .logout-btn{
 
   width:100%;
 
@@ -443,8 +443,17 @@ body{
 
   border-radius:18px;
 
-  border:
-    2px solid rgba(0,240,255,0.25);
+  padding:2px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  box-shadow:
+    0 10px 25px rgba(0,240,255,0.18);
 
 }
 
@@ -1132,7 +1141,7 @@ body{
 
 @media(max-width:768px){
 
-  body{
+   body{
 
     display:block;
 
@@ -1144,29 +1153,269 @@ body{
 
     bottom:0;
     top:auto;
+    left:0;
 
     width:100%;
-    height:90px;
+    height:78px;
+
     min-height:auto;
 
     flex-direction:row;
     align-items:center;
+    justify-content:space-between;
 
-    padding:0 20px;
+    padding:0 10px;
 
     border-right:none;
 
     border-top:
       1px solid rgba(255,255,255,0.08);
 
+    background:
+      rgba(5,6,10,0.92);
+
+    backdrop-filter:blur(18px);
+
+    z-index:9999;
+
   }
 
-  .sidebar-logo,
-  .sidebar-bottom{
+  /* Hide Logo */
+
+  .sidebar-logo{
 
     display:none;
 
   }
+
+  /* NAV */
+
+  .sidebar-nav{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:row;
+
+    justify-content:space-between;
+    align-items:center;
+
+    gap:4px;
+
+    width:100%;
+
+  }
+
+  /* NAV ITEMS */
+
+  .sidebar-nav a{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:4px;
+
+    padding:8px 4px;
+
+    border-radius:14px;
+
+    font-size:0.62rem;
+
+    min-width:0;
+
+    transform:none !important;
+
+  }
+
+  /* ICON */
+
+  .sidebar-nav a i{
+
+    font-size:1rem;
+
+  }
+
+  /* ACTIVE */
+
+  .sidebar-nav a.active{
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(0,240,255,0.16),
+        rgba(123,47,247,0.16)
+      );
+
+    border:
+      1px solid rgba(0,240,255,0.18);
+
+    box-shadow:
+      0 8px 20px rgba(0,240,255,0.08);
+
+  }
+
+  /* TEXT */
+
+  .sidebar-nav span{
+
+    display:block;
+
+    white-space:nowrap;
+
+  }
+
+  /* LOGOUT BUTTON VISIBLE */
+
+  .sidebar-bottom{
+
+  display:flex;
+
+  flex:1;
+
+  margin:0;
+
+}
+
+.sidebar-bottom .logout-btn{
+
+  flex:1;
+
+  width:100%;
+  height:auto;
+
+  padding:8px 4px;
+
+  border-radius:14px;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:4px;
+
+  font-size:0.62rem;
+
+  background:
+    transparent;
+
+  border:none;
+
+  transform:none !important;
+
+}
+
+.sidebar-bottom .logout-btn i{
+
+  font-size:1rem;
+
+}
+
+  .sidebar-bottom .logout-btn i{
+
+    font-size:1rem;
+
+  }
+  .logout-btn{
+
+  width:100%;
+
+  padding:
+    18px;
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  text-decoration:none;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:12px;
+
+  font-size:1rem;
+  font-weight:600;
+
+  transition:0.4s ease;
+
+  cursor:pointer;
+
+}
+
+.logout-btn:hover{
+
+  background:
+    linear-gradient(
+      90deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  transform:
+    translateY(-4px);
+
+}
+
+  /* MAIN */
+
+  .admin-main{
+
+    width:100%;
+
+    margin-left:0;
+
+    padding:
+      30px 20px 110px;
+
+  }
+
+  /* TOPBAR */
+
+  .admin-topbar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .topbar-right{
+
+    width:100%;
+
+  }
+
+  .dashboard-search{
+
+    width:100%;
+
+  }
+
+  /* TABLE */
+
+  .table-row{
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:20px;
+
+  }
+
 
   .sidebar-nav{
 
@@ -1249,5 +1498,51 @@ body{
     flex-direction:column;
 
   }
+
+}
+
+.logout-btn{
+
+  width:100%;
+
+  padding:
+    18px;
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  text-decoration:none;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:12px;
+
+  font-size:1rem;
+  font-weight:600;
+
+  transition:0.4s ease;
+
+}
+
+.logout-btn:hover{
+
+  background:
+    linear-gradient(
+      90deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  transform:
+    translateY(-4px);
 
 }

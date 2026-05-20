@@ -90,33 +90,17 @@
 
       </a>
 
-      <a href="#">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        <span>Addresses</span>
-
-      </a>
-
-      <a href="#">
-
-        <i class="fa-solid fa-credit-card"></i>
-
-        <span>Payments</span>
-
-      </a>
-
     <!-- Bottom -->
 
     <div class="sidebar-bottom">
 
-      <button>
+      <a href="index.html" class="logout-btn">
 
         <i class="fa-solid fa-right-from-bracket"></i>
 
         Logout
 
-      </button>
+      </a>
 
     </div>
 
@@ -181,7 +165,7 @@
         <div class="dashboard-user">
 
           <img
-            src="assets/images/user1.jpg"
+            src="Assets/dashboard/person2.webp"
             alt=""
           >
 
@@ -234,8 +218,8 @@
       <div class="hero-image">
 
         <img
-          src="assets/images/product4.png"
-          alt=""
+          src="Assets/dashboard/shutter-speed-BQ9usyzHx_w-unsplash_11zon.webp"
+          alt="image"
         >
 
       </div>
@@ -363,8 +347,8 @@
         <div class="order-card">
 
           <img
-            src="assets/images/product1.png"
-            alt=""
+            src="Assets/dashboard/taylor-smith-aDZ5YIuedQg-unsplash_11zon.webp"
+            alt="image"
           >
 
           <div class="order-content">
@@ -388,7 +372,7 @@
         <div class="order-card">
 
           <img
-            src="assets/images/product2.png"
+            src="Assets/dashboard/david-svihovec-HM-Y497t5CU-unsplash_11zon.webp"
             alt=""
           >
 
@@ -447,7 +431,7 @@
           <div class="recommended-image">
 
             <img
-              src="assets/images/product3.png"
+              src="Assets/dashboard/timothy-rose-nBaf7c_wd80-unsplash_11zon.webp"
               alt=""
             >
 
@@ -476,8 +460,8 @@
           <div class="recommended-image">
 
             <img
-              src="assets/images/product5.png"
-              alt=""
+              src="Assets/dashboard/tomasz-gawlowski-YDZPdqv3FcA-unsplash_11zon.webp"
+              alt="image"
             >
 
           </div>
@@ -503,6 +487,28 @@
     </section>
 
   </main>
+  <script>
+
+    const navItems =
+    document.querySelectorAll(".sidebar-nav a");
+
+    navItems.forEach(item => {
+
+      item.addEventListener("click", () => {
+
+        navItems.forEach(nav => {
+
+          nav.classList.remove("active");
+
+        });
+
+        item.classList.add("active");
+
+      });
+
+    });
+
+  </script>
 
 </body>
 
