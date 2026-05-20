@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Admin Dashboard | Stackly Cart</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="admin.css">
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- ====================================================== -->
+  <!-- SIDEBAR -->
+  <!-- ====================================================== -->
+
+  <aside class="admin-sidebar">
+
+    <!-- Logo -->
+
+    <a href="index.html" class="sidebar-logo">
+
+      <div class="logo-icon">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+      </div>
+
+      <h2>Stackly</h2>
+
+    </a>
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+      <a href="#" class="active">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <span>Dashboard</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-box"></i>
+
+        <span>Products</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <span>Categories</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span>Orders</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-users"></i>
+
+        <span>Customers</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-ticket"></i>
+
+        <span>Coupons</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-wallet"></i>
+
+        <span>Transactions</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <span>Analytics</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-gear"></i>
+
+        <span>Settings</span>
+
+      </a>
+
+    </nav>
+
+    <!-- Bottom -->
+
+    <div class="sidebar-bottom">
+
+      <button>
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- ====================================================== -->
+  <!-- MAIN -->
+  <!-- ====================================================== -->
+
+  <main class="admin-main">
+
+    <!-- ====================================================== -->
+    <!-- TOPBAR -->
+    <!-- ====================================================== -->
+
+    <header class="admin-topbar">
+
+      <!-- Left -->
+
+      <div class="topbar-left">
+
+        <h1>
+
+          Admin Control Center
+
+        </h1>
+
+        <p>
+
+          Manage futuristic ecommerce operations.
+
+        </p>
+
+      </div>
+
+      <!-- Right -->
+
+      <div class="topbar-right">
+
+        <!-- Search -->
+
+        <div class="dashboard-search">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            placeholder="Search products, orders..."
+          >
+
+        </div>
+
+        <!-- Notification -->
+
+        <div class="topbar-icon">
+
+          <i class="fa-regular fa-bell"></i>
+
+        </div>
+
+        <!-- Profile -->
+
+        <div class="admin-profile">
+
+          <img
+            src="assets/images/user1.jpg"
+            alt=""
+          >
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- ====================================================== -->
+    <!-- HERO -->
+    <!-- ====================================================== -->
+
+    <section class="admin-hero">
+
+      <!-- Glow -->
+
+      <div class="hero-glow"></div>
+
+      <!-- Left -->
+
+      <div class="hero-content">
+
+        <span>ADMIN ACCESS</span>
+
+        <h2>
+
+          Control The
+          Future Commerce
+
+        </h2>
+
+        <p>
+
+          Manage products, customers,
+          orders and analytics from one
+          futuristic admin ecosystem.
+
+        </p>
+
+        <button>
+
+          View Reports
+
+        </button>
+
+      </div>
+
+      <!-- Right -->
+
+      <div class="hero-image">
+
+        <img
+          src="assets/images/product5.png"
+          alt=""
+        >
+
+      </div>
+
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- STATS -->
+    <!-- ====================================================== -->
+
+    <section class="admin-stats">
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-wallet"></i>
+
+        </div>
+
+        <div>
+
+          <h3>₹8.4L</h3>
+
+          <p>Total Revenue</p>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-cart-shopping"></i>
+
+        </div>
+
+        <div>
+
+          <h3>1,248</h3>
+
+          <p>Total Orders</p>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <div>
+
+          <h3>4,320</h3>
+
+          <p>Customers</p>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-box"></i>
+
+        </div>
+
+        <div>
+
+          <h3>124</h3>
+
+          <p>Products</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- RECENT ORDERS -->
+    <!-- ====================================================== -->
+
+    <section class="recent-orders">
+
+      <!-- Title -->
+
+      <div class="section-header">
+
+        <h2>
+
+          Recent Orders
+
+        </h2>
+
+        <a href="#">
+
+          View All
+
+        </a>
+
+      </div>
+
+      <!-- Table -->
+
+      <div class="orders-table">
+
+        <!-- Row -->
+
+        <div class="table-row table-head">
+
+          <span>Customer</span>
+          <span>Order ID</span>
+          <span>Status</span>
+          <span>Total</span>
+
+        </div>
+
+        <!-- Row -->
+
+        <div class="table-row">
+
+          <span>Madan</span>
+          <span>#STK2045</span>
+
+          <span class="completed">
+
+            Completed
+
+          </span>
+
+          <span>₹8,499</span>
+
+        </div>
+
+        <!-- Row -->
+
+        <div class="table-row">
+
+          <span>Priya</span>
+          <span>#STK2046</span>
+
+          <span class="pending">
+
+            Pending
+
+          </span>
+
+          <span>₹4,999</span>
+
+        </div>
+
+        <!-- Row -->
+
+        <div class="table-row">
+
+          <span>Arjun</span>
+          <span>#STK2047</span>
+
+          <span class="processing">
+
+            Processing
+
+          </span>
+
+          <span>₹12,999</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- PRODUCT MANAGEMENT -->
+    <!-- ====================================================== -->
+
+    <section class="product-management">
+
+      <!-- Title -->
+
+      <div class="section-header">
+
+        <h2>
+
+          Product Inventory
+
+        </h2>
+
+        <button class="add-product-btn">
+
+          <i class="fa-solid fa-plus"></i>
+
+          Add Product
+
+        </button>
+
+      </div>
+
+      <!-- Grid -->
+
+      <div class="inventory-grid">
+
+        <!-- CARD -->
+
+        <div class="inventory-card">
+
+          <img
+            src="assets/images/product1.png"
+            alt=""
+          >
+
+          <h3>Cyber Sneakers</h3>
+
+          <p>Stock : 28</p>
+
+          <div class="inventory-actions">
+
+            <button>Edit</button>
+
+            <button class="delete-btn">
+
+              Delete
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="inventory-card">
+
+          <img
+            src="assets/images/product2.png"
+            alt=""
+          >
+
+          <h3>Neo Watch</h3>
+
+          <p>Stock : 16</p>
+
+          <div class="inventory-actions">
+
+            <button>Edit</button>
+
+            <button class="delete-btn">
+
+              Delete
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- ANALYTICS -->
+    <!-- ====================================================== -->
+
+    <section class="analytics-section">
+
+      <!-- Title -->
+
+      <div class="section-header">
+
+        <h2>
+
+          Performance Analytics
+
+        </h2>
+
+      </div>
+
+      <!-- Cards -->
+
+      <div class="analytics-grid">
+
+        <!-- CARD -->
+
+        <div class="analytics-card">
+
+          <h3>Conversion Rate</h3>
+
+          <span>78%</span>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="analytics-card">
+
+          <h3>Monthly Growth</h3>
+
+          <span>+42%</span>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="analytics-card">
+
+          <h3>Returning Users</h3>
+
+          <span>64%</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
