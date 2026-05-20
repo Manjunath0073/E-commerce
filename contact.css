@@ -1,0 +1,998 @@
+/* ====================================================== */
+/* CONTACT PAGE - PREMIUM FUTURISTIC DESIGN */
+/* ====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* ====================================================== */
+/* GLOBAL */
+/* ====================================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:'Inter',sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #05060a 0%,
+      #0b0f19 100%
+    );
+
+  color:white;
+
+  overflow-x:hidden;
+
+}
+
+/* ====================================================== */
+/* SCROLLBAR */
+/* ====================================================== */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#05060a;
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:
+    linear-gradient(
+      180deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  border-radius:20px;
+
+}
+
+/* ====================================================== */
+/* SECTION */
+/* ====================================================== */
+
+section{
+  padding:100px 5%;
+  position:relative;
+}
+
+/* ====================================================== */
+/* TOP BAR */
+/* ====================================================== */
+
+.top-bar{
+
+  width:100%;
+
+  padding:14px 5%;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  font-size:0.9rem;
+  font-weight:600;
+
+  letter-spacing:1px;
+
+}
+
+/* ====================================================== */
+/* NAVBAR */
+/* ====================================================== */
+
+.navbar{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  padding:
+    20px 5%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+
+  backdrop-filter:blur(18px);
+
+  background:
+    rgba(5,6,10,0.5);
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.05);
+
+}
+
+/* Logo */
+
+.logo{
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+}
+
+.logo-icon{
+
+  width:50px;
+  height:50px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+}
+
+.logo-icon i{
+
+  font-size:1.2rem;
+
+}
+
+.logo h2{
+
+  font-size:1.7rem;
+  font-weight:700;
+
+}
+
+/* Nav */
+
+.nav-links{
+
+  display:flex;
+  align-items:center;
+
+  gap:34px;
+
+}
+
+.nav-links a{
+
+  text-decoration:none;
+
+  color:#d1d5db;
+
+  font-size:0.95rem;
+  font-weight:500;
+
+  transition:0.3s ease;
+
+}
+
+.nav-links a:hover,
+.nav-links .active{
+
+  color:#00f0ff;
+
+}
+
+/* Auth */
+
+.nav-auth{
+
+  display:flex;
+  align-items:center;
+
+  gap:18px;
+
+}
+
+.login-btn{
+
+  padding:
+    14px 26px;
+
+  border-radius:50px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  text-decoration:none;
+
+  color:white;
+
+  transition:0.4s ease;
+
+}
+
+.login-btn:hover{
+
+  border-color:
+    rgba(0,240,255,0.25);
+
+}
+
+.signup-btn{
+
+  padding:
+    14px 26px;
+
+  border-radius:50px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  text-decoration:none;
+
+  color:white;
+
+  transition:0.4s ease;
+
+}
+
+.signup-btn:hover{
+
+  transform:
+    translateY(-4px);
+
+}
+
+/* ====================================================== */
+/* HERO */
+/* ====================================================== */
+
+.contact-hero{
+
+  min-height:75vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  overflow:hidden;
+
+  padding-top:180px;
+
+}
+
+/* Grid */
+
+.hero-grid{
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+
+    linear-gradient(
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size:70px 70px;
+
+}
+
+/* Glow */
+
+.hero-glow{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:0.18;
+
+}
+
+.glow-1{
+
+  width:350px;
+  height:350px;
+
+  background:#00f0ff;
+
+  top:-120px;
+  left:-120px;
+
+}
+
+.glow-2{
+
+  width:420px;
+  height:420px;
+
+  background:#7b2ff7;
+
+  bottom:-140px;
+  right:-140px;
+
+}
+
+/* Content */
+
+.contact-hero-content{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:900px;
+
+}
+
+.contact-hero-content span{
+
+  display:inline-block;
+
+  padding:
+    12px 24px;
+
+  border-radius:50px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:#00f0ff;
+
+  font-size:0.82rem;
+  font-weight:600;
+
+  letter-spacing:2px;
+
+  margin-bottom:28px;
+
+}
+
+.contact-hero-content h1{
+
+  font-size:
+    clamp(3rem,8vw,7rem);
+
+  line-height:1;
+
+  margin-bottom:30px;
+
+}
+
+.contact-hero-content p{
+
+  color:#9ca3af;
+
+  line-height:1.9;
+
+  font-size:1.05rem;
+
+}
+
+/* ====================================================== */
+/* CONTACT SECTION */
+/* ====================================================== */
+
+.contact-section{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1.2fr;
+
+  gap:60px;
+
+  align-items:start;
+
+}
+
+/* ====================================================== */
+/* INFO */
+/* ====================================================== */
+
+.contact-info{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:30px;
+
+}
+
+/* Card */
+
+.info-card{
+
+  display:flex;
+  align-items:center;
+
+  gap:24px;
+
+  padding:
+    30px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(18px);
+
+  transition:0.4s ease;
+
+}
+
+.info-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(0,240,255,0.2);
+
+}
+
+/* Icon */
+
+.info-icon{
+
+  min-width:70px;
+  height:70px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+}
+
+.info-icon i{
+
+  font-size:1.4rem;
+
+}
+
+/* Text */
+
+.info-card h3{
+
+  font-size:1.3rem;
+
+  margin-bottom:10px;
+
+}
+
+.info-card p{
+
+  color:#9ca3af;
+
+  line-height:1.8;
+
+}
+
+/* ====================================================== */
+/* SOCIAL */
+/* ====================================================== */
+
+.contact-social{
+
+  display:flex;
+  align-items:center;
+
+  gap:18px;
+
+  margin-top:10px;
+
+}
+
+.contact-social a{
+
+  width:55px;
+  height:55px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  text-decoration:none;
+
+  transition:0.4s ease;
+
+}
+
+.contact-social a:hover{
+
+  transform:
+    translateY(-6px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+}
+
+/* ====================================================== */
+/* FORM */
+/* ====================================================== */
+
+.contact-form-wrapper{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:
+    50px;
+
+  border-radius:40px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(24px);
+
+}
+
+/* Glow */
+
+.form-glow{
+
+  position:absolute;
+
+  width:320px;
+  height:320px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,240,255,0.15),
+      transparent 70%
+    );
+
+  filter:blur(100px);
+
+  top:-100px;
+  right:-100px;
+
+}
+
+/* Form */
+
+.contact-form{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+/* Group */
+
+.input-group{
+
+  margin-bottom:26px;
+
+}
+
+/* Input */
+
+.input-group input,
+.input-group textarea{
+
+  width:100%;
+
+  padding:
+    22px 24px;
+
+  border:none;
+
+  border-radius:22px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  outline:none;
+
+  font-size:1rem;
+
+  transition:0.3s ease;
+
+}
+
+/* Focus */
+
+.input-group input:focus,
+.input-group textarea:focus{
+
+  border-color:
+    rgba(0,240,255,0.3);
+
+  box-shadow:
+    0 0 0 4px rgba(0,240,255,0.08);
+
+}
+
+/* Textarea */
+
+.input-group textarea{
+
+  height:180px;
+
+  resize:none;
+
+}
+
+/* Placeholder */
+
+::placeholder{
+
+  color:#9ca3af;
+
+}
+
+/* Button */
+
+.contact-form button{
+
+  width:100%;
+
+  padding:
+    20px;
+
+  border:none;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  color:white;
+
+  font-size:1rem;
+  font-weight:600;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:12px;
+
+  cursor:pointer;
+
+  transition:0.4s ease;
+
+}
+
+.contact-form button:hover{
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 20px 40px rgba(0,240,255,0.2);
+
+}
+
+/* ====================================================== */
+/* FAQ */
+/* ====================================================== */
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:70px;
+
+}
+
+.section-title span{
+
+  display:inline-block;
+
+  padding:
+    12px 24px;
+
+  border-radius:50px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:#00f0ff;
+
+  font-size:0.82rem;
+  font-weight:600;
+
+  letter-spacing:2px;
+
+  margin-bottom:22px;
+
+}
+
+.section-title h2{
+
+  font-size:
+    clamp(2.5rem,5vw,4.5rem);
+
+  font-weight:800;
+
+}
+
+/* FAQ Wrapper */
+
+.faq-wrapper{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:24px;
+
+}
+
+/* FAQ Item */
+
+.faq-item{
+
+  padding:
+    30px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition:0.4s ease;
+
+}
+
+.faq-item:hover{
+
+  border-color:
+    rgba(0,240,255,0.2);
+
+  transform:
+    translateY(-4px);
+
+}
+
+/* Question */
+
+.faq-question{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:20px;
+
+}
+
+.faq-question h3{
+
+  font-size:1.2rem;
+
+}
+
+.faq-question i{
+
+  color:#00f0ff;
+
+  font-size:1.1rem;
+
+}
+
+/* ====================================================== */
+/* MAP */
+/* ====================================================== */
+
+.map-wrapper{
+
+  overflow:hidden;
+
+  border-radius:40px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+}
+
+.map-wrapper iframe{
+
+  width:100%;
+  height:500px;
+
+  border:none;
+
+  filter:
+
+    grayscale(0.2)
+    contrast(1.05)
+    brightness(1.02);
+
+}
+
+/* ====================================================== */
+/* FOOTER */
+/* ====================================================== */
+
+.footer{
+
+  padding:
+    120px 5% 40px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #080b12 0%,
+      #05060a 100%
+    );
+
+}
+
+/* USE SAME FOOTER CSS AS HOMEPAGE */
+
+/* ====================================================== */
+/* RESPONSIVE */
+/* ====================================================== */
+
+@media(max-width:992px){
+
+  .contact-section{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  section{
+    padding:80px 5%;
+  }
+
+  .nav-links,
+  .nav-auth{
+    display:none;
+  }
+
+  .contact-form-wrapper{
+
+    padding:40px 24px;
+
+  }
+
+  .faq-question h3{
+
+    font-size:1rem;
+
+  }
+
+}
+
+@media(max-width:480px){
+
+  .contact-hero-content h1{
+
+    font-size:2.6rem;
+
+  }
+
+  .info-card{
+
+    flex-direction:column;
+    align-items:flex-start;
+
+  }
+
+}
+
+.map-wrapper{
+
+  overflow:hidden;
+
+  border-radius:40px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition:0.4s ease;
+
+}
+
+.map-wrapper:hover{
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 30px 60px rgba(0,240,255,0.12);
+
+}
