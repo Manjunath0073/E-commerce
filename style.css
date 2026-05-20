@@ -30,7 +30,7 @@ img{
 
 section{
   width: 100%;
-  padding: 80px 8%;
+  padding: 0px 8%;
 }
 
 /* Root Variables */
@@ -625,7 +625,7 @@ a{
 
   gap: 60px;
 
-  padding: 120px 8% 80px;
+  padding: 100px 8% 60px;
 
   overflow: hidden;
 
@@ -1437,6 +1437,11 @@ img{
 .secondary-btn{
 
   cursor: pointer;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -1666,7 +1671,7 @@ img{
 
   text-align: center;
 
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 
 }
 
@@ -2495,7 +2500,7 @@ img{
   border-radius: 40px;
 
   margin:
-    100px 8%;
+    60px 8%;
 
   background:
     linear-gradient(
@@ -2833,7 +2838,7 @@ img{
     120px 8%;
 
   margin:
-    100px 0;
+    50px 0;
 
   overflow: hidden;
 
@@ -2892,6 +2897,7 @@ img{
   position: relative;
 
   z-index: 2;
+  padding:0px;
 
 }
 
@@ -3552,7 +3558,7 @@ img{
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 
   position: relative;
 
@@ -4057,7 +4063,7 @@ img{
 
   text-align: center;
 
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 
   position: relative;
 
@@ -4572,7 +4578,7 @@ img{
   gap: 80px;
 
   padding:
-    140px 8%;
+    90px 8%;
 
   overflow: hidden;
 
