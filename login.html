@@ -108,7 +108,7 @@
 
       <!-- FORM -->
 
-      <form class="auth-form">
+      <form class="auth-form" id="loginForm">
 
         <!-- EMAIL -->
 
@@ -150,6 +150,56 @@
 
         </div>
 
+
+        <!-- ROLE SELECTION -->
+
+        <div class="role-selection">
+
+          <label>Select Role</label>
+
+          <div class="role-wrapper">
+
+            <label class="role-card">
+
+              <input
+                type="radio"
+                name="role"
+                id="customerRole"
+                checked
+              >
+
+              <div class="role-content">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Customer</span>
+
+              </div>
+
+            </label>
+
+            <label class="role-card">
+
+              <input
+                type="radio"
+                name="role"
+                id="adminRole"
+              >
+
+              <div class="role-content">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <span>Admin</span>
+
+              </div>
+
+            </label>
+
+          </div>
+
+        </div>
+
         <!-- OPTIONS -->
 
         <div class="auth-options">
@@ -170,7 +220,7 @@
 
         <!-- BUTTON -->
 
-        <button class="auth-btn">
+        <button type="submit" class="auth-btn">
 
           Login Now
 
@@ -232,6 +282,42 @@
 
   </section>
 
+  <script>
+
+    const loginForm =
+    document.getElementById("loginForm");
+
+    const customerRole =
+    document.getElementById("customerRole");
+
+    const adminRole =
+    document.getElementById("adminRole");
+
+    loginForm.addEventListener("submit", (e) => {
+
+      e.preventDefault();
+
+      // CUSTOMER
+
+      if(customerRole.checked){
+
+        window.location.href =
+        "index.html";
+
+      }
+
+      // ADMIN
+
+      else if(adminRole.checked){
+
+        window.location.href =
+        "admin-dashboard.html";
+
+      }
+
+    });
+
+</script>
 </body>
 
 </html>

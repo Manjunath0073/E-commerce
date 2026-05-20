@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Customer Dashboard | Stackly Cart</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="customer.css">
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- SIDEBAR -->
+  <!-- ========================= -->
+
+  <aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="sidebar-logo">
+
+      <div class="logo-icon">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+      </div>
+
+      <h2>Stackly</h2>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+      <a href="#" class="active">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Dashboard</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span>Orders</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-regular fa-heart"></i>
+
+        <span>Wishlist</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+        <span>My Cart</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <span>Addresses</span>
+
+      </a>
+
+      <a href="#">
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        <span>Payments</span>
+
+      </a>
+
+    <!-- Bottom -->
+
+    <div class="sidebar-bottom">
+
+      <button>
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- ========================= -->
+  <!-- MAIN -->
+  <!-- ========================= -->
+
+  <main class="dashboard-main">
+
+    <!-- TOPBAR -->
+
+    <header class="dashboard-topbar">
+
+      <!-- Left -->
+
+      <div class="topbar-left">
+
+        <h1>
+
+          Welcome Back,
+          Madan 👋
+
+        </h1>
+
+        <p>
+
+          Explore your futuristic
+          shopping experience.
+
+        </p>
+
+      </div>
+
+      <!-- Right -->
+
+      <div class="topbar-right">
+
+        <!-- Search -->
+
+        <div class="dashboard-search">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            placeholder="Search products..."
+          >
+
+        </div>
+
+        <!-- Notification -->
+
+        <div class="topbar-icon">
+
+          <i class="fa-regular fa-bell"></i>
+
+        </div>
+
+        <!-- User -->
+
+        <div class="dashboard-user">
+
+          <img
+            src="assets/images/user1.jpg"
+            alt=""
+          >
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- HERO CARD -->
+    <!-- ========================= -->
+
+    <section class="dashboard-hero">
+
+      <!-- Glow -->
+
+      <div class="hero-glow"></div>
+
+      <!-- Content -->
+
+      <div class="hero-content">
+
+        <span>PREMIUM MEMBER</span>
+
+        <h2>
+
+          Unlock The
+          Future Of Shopping
+
+        </h2>
+
+        <p>
+
+          Access exclusive futuristic
+          collections and premium member deals.
+
+        </p>
+
+        <button>
+
+          Explore Collection
+
+        </button>
+
+      </div>
+
+      <!-- Image -->
+
+      <div class="hero-image">
+
+        <img
+          src="assets/images/product4.png"
+          alt=""
+        >
+
+      </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- STATS -->
+    <!-- ========================= -->
+
+    <section class="dashboard-stats">
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-bag-shopping"></i>
+
+        </div>
+
+        <div>
+
+          <h3>24</h3>
+
+          <p>Total Orders</p>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-regular fa-heart"></i>
+
+        </div>
+
+        <div>
+
+          <h3>18</h3>
+
+          <p>Wishlist Items</p>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-wallet"></i>
+
+        </div>
+
+        <div>
+
+          <h3>₹24K</h3>
+
+          <p>Total Spent</p>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+
+          <i class="fa-solid fa-gift"></i>
+
+        </div>
+
+        <div>
+
+          <h3>12</h3>
+
+          <p>Rewards Earned</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- RECENT ORDERS -->
+    <!-- ========================= -->
+
+    <section class="recent-orders">
+
+      <!-- Title -->
+
+      <div class="dashboard-section-title">
+
+        <h2>
+
+          Recent Orders
+
+        </h2>
+
+        <a href="#">
+
+          View All
+
+        </a>
+
+      </div>
+
+      <!-- Orders -->
+
+      <div class="orders-wrapper">
+
+        <!-- ORDER -->
+
+        <div class="order-card">
+
+          <img
+            src="assets/images/product1.png"
+            alt=""
+          >
+
+          <div class="order-content">
+
+            <h3>Cyber Sneakers</h3>
+
+            <p>Order ID : #STK2045</p>
+
+          </div>
+
+          <span class="delivered">
+
+            Delivered
+
+          </span>
+
+        </div>
+
+        <!-- ORDER -->
+
+        <div class="order-card">
+
+          <img
+            src="assets/images/product2.png"
+            alt=""
+          >
+
+          <div class="order-content">
+
+            <h3>Neo Smart Watch</h3>
+
+            <p>Order ID : #STK2046</p>
+
+          </div>
+
+          <span class="processing">
+
+            Processing
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- RECOMMENDED -->
+    <!-- ========================= -->
+
+    <section class="recommended-products">
+
+      <!-- Title -->
+
+      <div class="dashboard-section-title">
+
+        <h2>
+
+          Recommended For You
+
+        </h2>
+
+        <a href="#">
+
+          Explore
+
+        </a>
+
+      </div>
+
+      <!-- Grid -->
+
+      <div class="recommended-grid">
+
+        <!-- CARD -->
+
+        <div class="recommended-card">
+
+          <div class="recommended-image">
+
+            <img
+              src="assets/images/product3.png"
+              alt=""
+            >
+
+          </div>
+
+          <div class="recommended-content">
+
+            <h3>Future Hoodie</h3>
+
+            <p>₹4,999</p>
+
+            <button>
+
+              Add To Cart
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="recommended-card">
+
+          <div class="recommended-image">
+
+            <img
+              src="assets/images/product5.png"
+              alt=""
+            >
+
+          </div>
+
+          <div class="recommended-content">
+
+            <h3>Luxury Headset</h3>
+
+            <p>₹8,999</p>
+
+            <button>
+
+              Add To Cart
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

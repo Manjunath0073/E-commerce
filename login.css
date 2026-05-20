@@ -1074,3 +1074,146 @@ body{
   transition: 0.3s ease;
 
 }
+
+
+/* ========================= */
+/* ROLE SELECTION */
+/* ========================= */
+
+.role-selection{
+
+  margin-bottom: 28px;
+
+}
+
+/* Label */
+
+.role-selection label{
+
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #d1d5db;
+
+  font-size: 0.95rem;
+
+}
+
+/* Wrapper */
+
+.role-wrapper{
+
+  display: flex;
+
+  gap: 18px;
+
+}
+
+/* Hide Radio */
+
+.role-card input{
+
+  display: none;
+
+}
+
+/* Card */
+
+.role-card{
+
+  flex: 1;
+
+  cursor: pointer;
+
+}
+
+/* Content */
+
+.role-content{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  padding:
+    22px;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition: 0.4s ease;
+
+}
+
+/* Icon */
+
+.role-content i{
+
+  font-size: 1.3rem;
+
+  color: #00f0ff;
+
+}
+
+/* Text */
+
+.role-content span{
+
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+}
+
+/* Hover */
+
+.role-card:hover .role-content{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(0,240,255,0.25);
+
+}
+
+/* Active */
+
+.role-card input:checked + .role-content{
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,240,255,0.18),
+      rgba(123,47,247,0.18)
+    );
+
+  border-color:
+    rgba(0,240,255,0.4);
+
+  box-shadow:
+    0 10px 30px rgba(0,240,255,0.12);
+
+}
+
+/* Responsive */
+
+@media(max-width:480px){
+
+  .role-wrapper{
+
+    flex-direction: column;
+
+  }
+
+}
