@@ -15,7 +15,8 @@
   <!-- CSS -->
 
   <link rel="stylesheet" href="customer.css">
-
+  <link rel="stylesheet" href="collections.css">
+  <link rel="stylesheet" href="style.css">
   <!-- FONT AWESOME -->
 
   <link
@@ -42,67 +43,78 @@
 
     <!-- Logo -->
 
-    <div class="sidebar-logo">
+    <a href="index.html" class="logo">
 
       <div class="logo-icon">
-
         <i class="fa-solid fa-bag-shopping"></i>
-
       </div>
 
-      <h2>Stackly</h2>
+      <h2>Stackly Cart</h2>
 
-    </div>
+  </a>
 
     <!-- Navigation -->
-
     <nav class="sidebar-nav">
 
-      <a href="#" class="active">
+  <a
+    href="#"
+    class="active"
+    data-target="dashboard"
+  >
 
-        <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-house"></i>
 
-        <span>Dashboard</span>
+    <span>Dashboard</span>
 
-      </a>
+  </a>
 
-      <a href="#">
+  <a
+    href="#"
+    data-target="orders"
+  >
 
-        <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
 
-        <span>Orders</span>
+    <span>Orders</span>
 
-      </a>
+  </a>
 
-      <a href="#">
+  <a
+    href="#"
+    data-target="wishlist"
+  >
 
-        <i class="fa-regular fa-heart"></i>
+    <i class="fa-regular fa-heart"></i>
 
-        <span>Wishlist</span>
+    <span>Wishlist</span>
 
-      </a>
+  </a>
 
-      <a href="#">
+  <a
+    href="#"
+    data-target="cart"
+  >
 
-        <i class="fa-solid fa-bag-shopping"></i>
+    <i class="fa-solid fa-bag-shopping"></i>
 
-        <span>My Cart</span>
+    <span>My Cart</span>
 
-      </a>
+  </a>
 
-    <!-- Bottom -->
+  <!-- LOGOUT -->
 
-    <div class="sidebar-bottom">
+  <a
+    href="index.html"
+    class="logout-btn"
+  >
 
-      <a href="index.html" class="logout-btn">
+    <i class="fa-solid fa-right-from-bracket"></i>
 
-        <i class="fa-solid fa-right-from-bracket"></i>
+    <span>Logout</span>
 
-        Logout
+  </a>
 
-      </a>
-
-    </div>
+</nav>
 
   </aside>
 
@@ -111,7 +123,10 @@
   <!-- ========================= -->
 
   <main class="dashboard-main">
-
+  <div
+  class="dashboard-content active-content"
+  id="dashboard"
+>
     <!-- TOPBAR -->
 
     <header class="dashboard-topbar">
@@ -205,11 +220,15 @@
 
         </p>
 
-        <button>
+        <a href="404.html">
 
-          Explore Collection
+  <button>
 
-        </button>
+    View Reports
+
+  </button>
+
+</a>
 
       </div>
 
@@ -486,29 +505,215 @@
 
     </section>
 
-  </main>
+</div>
+
+<!-- ORDERS -->
+
+<div
+  class="dashboard-content"
+  id="orders"
+>
+
+  <section class="recent-orders">
+
+    <div class="dashboard-section-title">
+
+      <h2>My Orders</h2>
+
+    </div>
+
+    <div class="orders-wrapper">
+
+      <div class="order-card">
+
+        <img
+          src="Assets/dashboard/taylor-smith-aDZ5YIuedQg-unsplash_11zon.webp"
+          alt=""
+        >
+
+        <div class="order-content">
+
+          <h3>Future Sneakers</h3>
+
+          <p>Order ID : #STK3045</p>
+
+        </div>
+
+        <span class="delivered">
+
+          Delivered
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- WISHLIST -->
+
+<div
+  class="dashboard-content"
+  id="wishlist"
+>
+
+  <section class="recommended-products">
+
+    <div class="dashboard-section-title">
+
+      <h2>Wishlist Items</h2>
+
+    </div>
+
+    <div class="recommended-grid">
+
+      <div class="recommended-card">
+
+        <div class="recommended-image">
+
+          <img
+            src="Assets/dashboard/timothy-rose-nBaf7c_wd80-unsplash_11zon.webp"
+            alt=""
+          >
+
+        </div>
+
+        <div class="recommended-content">
+
+          <h3>Future Hoodie</h3>
+
+          <p>₹4,999</p>
+
+          <button>
+
+            Add To Cart
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- CART -->
+
+<div
+  class="dashboard-content"
+  id="cart"
+>
+
+  <section class="recommended-products">
+
+    <div class="dashboard-section-title">
+
+      <h2>My Cart</h2>
+
+    </div>
+
+    <div class="recommended-grid">
+
+      <div class="recommended-card">
+
+        <div class="recommended-image">
+
+          <img
+            src="Assets/dashboard/tomasz-gawlowski-YDZPdqv3FcA-unsplash_11zon.webp"
+            alt=""
+          >
+
+        </div>
+
+        <div class="recommended-content">
+
+          <h3>Luxury Headset</h3>
+
+          <p>₹8,999</p>
+
+          <button>
+
+            Checkout
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</main>
   <script>
 
-    const navItems =
-    document.querySelectorAll(".sidebar-nav a");
+  const navItems =
+  document.querySelectorAll(".sidebar-nav a");
 
-    navItems.forEach(item => {
+  const sections =
+  document.querySelectorAll(".dashboard-content");
 
-      item.addEventListener("click", () => {
+  navItems.forEach(item => {
 
-        navItems.forEach(nav => {
+    item.addEventListener("click", (e) => {
 
-          nav.classList.remove("active");
+      // SKIP LOGOUT
 
-        });
+      if(
+        item.classList.contains("logout-btn")
+      ){
+        return;
+      }
 
-        item.classList.add("active");
+      e.preventDefault();
+
+      // REMOVE ACTIVE
+
+      navItems.forEach(nav => {
+
+        nav.classList.remove("active");
 
       });
 
+      // ADD ACTIVE
+
+      item.classList.add("active");
+
+      // TARGET
+
+      const target =
+      item.getAttribute("data-target");
+
+      // HIDE ALL
+
+      sections.forEach(section => {
+
+        section.classList.remove(
+          "active-content"
+        );
+
+      });
+
+      // SHOW TARGET
+
+      document
+      .getElementById(target)
+      .classList.add("active-content");
+
     });
 
-  </script>
+  });
+
+</script>
 
 </body>
 

@@ -163,6 +163,8 @@ body{
 
 .sidebar-nav a{
 
+  position:relative;
+
   display:flex;
   align-items:center;
 
@@ -180,7 +182,47 @@ body{
   font-size:0.98rem;
   font-weight:500;
 
+  overflow:hidden;
+
   transition:0.4s ease;
+
+}
+
+/* ACTIVE LINE */
+
+.sidebar-nav a::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:50%;
+
+  width:4px;
+  height:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #00f0ff,
+      #7b2ff7
+    );
+
+  border-radius:20px;
+
+  transform:
+    translateY(-50%);
+
+  transition:0.4s ease;
+
+}
+
+/* SHOW ACTIVE LINE */
+
+.sidebar-nav a.active::before{
+
+  height:65%;
 
 }
 
@@ -224,65 +266,6 @@ body{
   font-size:1.05rem;
 
 }
-
-/* ====================================================== */
-/* SIDEBAR BOTTOM */
-/* ====================================================== */
-
-.sidebar-bottom{
-
-  margin-top:50px;
-
-}
-
-.sidebar-bottom .logout-btn{
-
-  width:100%;
-
-  padding:
-    18px;
-
-  border:none;
-
-  border-radius:20px;
-
-  background:
-    rgba(255,255,255,0.05);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  color:white;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  gap:12px;
-
-  font-size:1rem;
-  font-weight:600;
-
-  cursor:pointer;
-
-  transition:0.4s ease;
-
-}
-
-.sidebar-bottom button:hover{
-
-  background:
-    linear-gradient(
-      90deg,
-      #00f0ff,
-      #7b2ff7
-    );
-
-  transform:
-    translateY(-4px);
-
-}
-
 /* ====================================================== */
 /* MAIN */
 /* ====================================================== */
@@ -413,6 +396,11 @@ body{
   cursor:pointer;
 
   transition:0.4s ease;
+  text-decoration:none;
+
+  color:white;
+
+  flex-shrink:0;
 
 }
 
@@ -1192,7 +1180,7 @@ body{
 
   .sidebar-nav{
 
-    flex:1;
+    flex:5;
 
     display:flex;
     flex-direction:row;
@@ -1205,6 +1193,23 @@ body{
     width:100%;
 
   }
+  .logout-btn{
+
+  text-decoration:none;
+
+}
+
+a{
+
+  text-decoration:none;
+
+}
+
+.topbar-icon{
+
+  text-decoration:none;
+
+}
 
   /* NAV ITEMS */
 
@@ -1277,7 +1282,8 @@ body{
 
   flex:1;
 
-  margin:0;
+  justify-content:center;
+  align-items:center;
 
 }
 
@@ -1285,10 +1291,12 @@ body{
 
   flex:1;
 
-  width:100%;
-  height:auto;
+  min-width:58px;
 
-  padding:8px 4px;
+  width:100%;
+  height:62px;
+
+  padding:0;
 
   border-radius:14px;
 
@@ -1302,12 +1310,18 @@ body{
 
   font-size:0.62rem;
 
-  background:
-    transparent;
+  background:transparent;
 
   border:none;
 
   transform:none !important;
+  position:relative;
+
+  top:-1px;
+
+  margin:0;
+
+  line-height:1;
 
 }
 
@@ -1322,39 +1336,12 @@ body{
     font-size:1rem;
 
   }
-  .logout-btn{
+  .sidebar-bottom .logout-btn:hover{
 
-  width:100%;
-
-  padding:
-    18px;
-
-  border-radius:20px;
-
-  background:
-    rgba(255,255,255,0.05);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  color:white;
-
-  text-decoration:none;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  gap:12px;
-
-  font-size:1rem;
-  font-weight:600;
-
-  transition:0.4s ease;
-
-  cursor:pointer;
+  transform:none !important;
 
 }
+ 
 
 .logout-btn:hover{
 
@@ -1369,6 +1356,7 @@ body{
     translateY(-4px);
 
 }
+
 
   /* MAIN */
 
@@ -1417,33 +1405,6 @@ body{
   }
 
 
-  .sidebar-nav{
-
-    flex-direction:row;
-
-    justify-content:space-between;
-
-    width:100%;
-
-  }
-
-  .sidebar-nav a{
-
-    flex-direction:column;
-
-    gap:8px;
-
-    padding:12px;
-
-    font-size:0.7rem;
-
-  }
-
-  .sidebar-nav span{
-
-    display:block;
-
-  }
 
   .admin-main{
 
@@ -1544,5 +1505,49 @@ body{
 
   transform:
     translateY(-4px);
+
+}
+/* ========================= */
+/* DASHBOARD CONTENT */
+/* ========================= */
+
+.dashboard-content{
+
+  display:none;
+
+  animation:
+    dashboardFade 0.4s ease;
+
+}
+
+/* Active */
+
+.active-content{
+
+  display:block;
+
+}
+
+/* Animation */
+
+@keyframes dashboardFade{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(15px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0px);
+
+  }
 
 }

@@ -15,7 +15,9 @@
   <!-- CSS -->
 
   <link rel="stylesheet" href="admin.css">
-
+  
+  <link rel="stylesheet" href="collections.css">
+  <link rel="stylesheet" href="style.css">
   <!-- FONT AWESOME -->
 
   <link
@@ -42,69 +44,79 @@
 
     <!-- Logo -->
 
-    <a href="index.html" class="sidebar-logo">
+
+    <a href="index.html" class="logo">
 
       <div class="logo-icon">
-
         <i class="fa-solid fa-bag-shopping"></i>
-
       </div>
 
-      <h2>Stackly</h2>
+      <h2>Stackly Cart</h2>
 
-    </a>
-
+  </a>
     <!-- Navigation -->
 
-    <nav class="sidebar-nav">
+<nav class="sidebar-nav">
 
-      <a href="#" class="active">
+  <a
+    href="#"
+    class="active"
+    data-target="dashboard"
+  >
 
-        <i class="fa-solid fa-chart-line"></i>
+    <i class="fa-solid fa-chart-line"></i>
 
-        <span>Dashboard</span>
+    <span>Dashboard</span>
 
-      </a>
+  </a>
 
-      <a href="#">
+  <a
+    href="#"
+    data-target="products"
+  >
 
-        <i class="fa-solid fa-box"></i>
+    <i class="fa-solid fa-box"></i>
 
-        <span>Products</span>
+    <span>Products</span>
 
-      </a>
+  </a>
 
-      <a href="#">
+  <a
+    href="#"
+    data-target="categories"
+  >
 
-        <i class="fa-solid fa-layer-group"></i>
+    <i class="fa-solid fa-layer-group"></i>
 
-        <span>Categories</span>
+    <span>Categories</span>
 
-      </a>
+  </a>
 
-      <a href="#">
+  <a
+    href="#"
+    data-target="orders"
+  >
 
-        <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
 
-        <span>Orders</span>
+    <span>Orders</span>
 
-      </a>
+  </a>
 
-    </nav>
+<!-- Logout -->
 
-    <!-- Bottom -->
+<a
+  href="index.html"
+  class="logout-btn"
+>
 
-    <div class="sidebar-bottom">
+  <i class="fa-solid fa-right-from-bracket"></i>
 
-      <a href="index.html" class="logout-btn">
+  <span>Logout</span>
 
-        <i class="fa-solid fa-right-from-bracket"></i>
+</a>
 
-        Logout
-
-      </a>
-
-    </div>
+</nav>
 
   </aside>
 
@@ -113,6 +125,10 @@
   <!-- ====================================================== -->
 
   <main class="admin-main">
+    <div
+  class="dashboard-content active-content"
+  id="dashboard"
+>
 
     <!-- ====================================================== -->
     <!-- TOPBAR -->
@@ -157,11 +173,14 @@
 
         <!-- Notification -->
 
-        <div class="topbar-icon">
+        <a
+  href="404.html"
+  class="topbar-icon"
+>
 
-          <i class="fa-regular fa-bell"></i>
+  <i class="fa-regular fa-bell"></i>
 
-        </div>
+</a>
 
         <!-- Profile -->
 
@@ -209,11 +228,15 @@
 
         </p>
 
-        <button>
+        <a href="404.html">
 
-          View Reports
+  <button>
 
-        </button>
+    View Reports
+
+  </button>
+
+</a>
 
       </div>
 
@@ -556,15 +579,149 @@
 
     </section>
 
-  </main>
+</div>
+
+<!-- PRODUCTS PAGE -->
+
+<div
+  class="dashboard-content"
+  id="products"
+>
+
+  <section class="analytics-section">
+
+    <div class="section-header">
+
+      <h2>Products Management</h2>
+
+    </div>
+
+    <div class="analytics-grid">
+
+      <div class="analytics-card">
+
+        <h3>Total Products</h3>
+
+        <span>124</span>
+
+      </div>
+
+      <div class="analytics-card">
+
+        <h3>Out Of Stock</h3>
+
+        <span>08</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- CATEGORIES PAGE -->
+
+<div
+  class="dashboard-content"
+  id="categories"
+>
+
+  <section class="analytics-section">
+
+    <div class="section-header">
+
+      <h2>Categories</h2>
+
+    </div>
+
+    <div class="analytics-grid">
+
+      <div class="analytics-card">
+
+        <h3>Fashion</h3>
+
+        <span>24</span>
+
+      </div>
+
+      <div class="analytics-card">
+
+        <h3>Electronics</h3>
+
+        <span>18</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- ORDERS PAGE -->
+
+<div
+  class="dashboard-content"
+  id="orders"
+>
+
+  <section class="recent-orders">
+
+    <div class="section-header">
+
+      <h2>All Orders</h2>
+
+    </div>
+
+    <div class="orders-table">
+
+      <div class="table-row table-head">
+
+        <span>Customer</span>
+        <span>Order ID</span>
+        <span>Status</span>
+        <span>Total</span>
+
+      </div>
+
+      <div class="table-row">
+
+        <span>Madan</span>
+        <span>#STK2045</span>
+
+        <span class="completed">
+
+          Completed
+
+        </span>
+
+        <span>₹8,499</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</main>
 <script>
 
   const navItems =
   document.querySelectorAll(".sidebar-nav a");
 
+  const sections =
+  document.querySelectorAll(".dashboard-content");
+
   navItems.forEach(item => {
 
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
+
+      e.preventDefault();
+
+      // REMOVE ACTIVE NAV
 
       navItems.forEach(nav => {
 
@@ -572,7 +729,28 @@
 
       });
 
+      // ACTIVE NAV
+
       item.classList.add("active");
+
+      // TARGET
+
+      const target =
+      item.getAttribute("data-target");
+
+      // HIDE ALL
+
+      sections.forEach(section => {
+
+        section.classList.remove("active-content");
+
+      });
+
+      // SHOW TARGET
+
+      document
+      .getElementById(target)
+      .classList.add("active-content");
 
     });
 
