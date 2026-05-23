@@ -1019,6 +1019,12 @@ body{
 
 }
 
+.cart-btn-link{
+
+  text-decoration:none;
+
+}
+
 @media(max-width:992px){
 
   .sidebar{

@@ -106,7 +106,7 @@
 <!-- Logout -->
 
 <a
-  href="index.html"
+  href="login.html"
   class="logout-btn"
 >
 
@@ -451,13 +451,20 @@
 
         </h2>
 
-        <button class="add-product-btn">
+        <a
+          href="404.html"
+          class="add-product-link"
+        >
 
-          <i class="fa-solid fa-plus"></i>
+          <button class="add-product-btn">
 
-          Add Product
+            <i class="fa-solid fa-plus"></i>
 
-        </button>
+            Add Product
+
+          </button>
+
+        </a>
 
       </div>
 
@@ -719,9 +726,17 @@
 
     item.addEventListener("click", (e) => {
 
+      // SKIP LOGOUT
+
+      if(
+        item.classList.contains("logout-btn")
+      ){
+        return;
+      }
+
       e.preventDefault();
 
-      // REMOVE ACTIVE NAV
+      // REMOVE ACTIVE
 
       navItems.forEach(nav => {
 
@@ -742,7 +757,9 @@
 
       sections.forEach(section => {
 
-        section.classList.remove("active-content");
+        section.classList.remove(
+          "active-content"
+        );
 
       });
 
